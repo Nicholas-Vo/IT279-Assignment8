@@ -8,7 +8,7 @@ CXXFLAGS = -std=c++11 -Wall
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = a08_nickvoss
+APPNAME = a08_q1_nickvoss
 EXT = .cpp
 SRCDIR = src
 OBJDIR = obj

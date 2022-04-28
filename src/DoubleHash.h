@@ -4,14 +4,15 @@
 // CPP program to implement double hashing
 #include <iostream>
 #include <math.h>
+#include <wsman.h>
 #include "Student.h"
+
 using namespace std;
 
-template <typename HashedObj>
-class DoubleHash
-{
+template<typename HashedObj>
+class DoubleHash {
 public:
-    DoubleHash(int size);
+    explicit DoubleHash(int size);
 
     // function to check if hash table is full
     bool isFull();
@@ -53,8 +54,7 @@ public:
      * Internal method to test if a positive number is prime.
      * Not an efficient algorithm.
      */
-    bool isPrime(int n)
-    {
+    bool isPrime(int n) {
         if (n == 2 || n == 3)
             return true;
 
@@ -72,20 +72,17 @@ public:
      * Internal method to return a prime number at least as large as n.
      * Assumes n > 0.
      */
-    int nextPrime(int n)
-    {
+    int nextPrime(int n) {
         if (n % 2 == 0)
             ++n;
 
-        for (; !isPrime(n); n += 2)
-            ;
+        for (; !isPrime(n); n += 2);
 
         return n;
     }
 
     // Function to return nearest prime number
-    int prePrime(int n)
-    {
+    int prePrime(int n) {
 
         // All prime numbers are odd except two
         if (n & 1)
@@ -94,12 +91,10 @@ public:
             n--;
 
         int i, j;
-        for (i = n; i >= 2; i -= 2)
-        {
+        for (i = n; i >= 2; i -= 2) {
             if (i % 2 == 0)
                 continue;
-            for (j = 3; j <= sqrt(i); j += 2)
-            {
+            for (j = 3; j <= sqrt(i); j += 2) {
                 if (i % j == 0)
                     break;
             }
@@ -119,4 +114,5 @@ private:
     Student<string> *student;
     int curr_size;
 };
+
 #endif

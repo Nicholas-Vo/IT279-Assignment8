@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 #include <sstream> // std::stringstream
-#include <math.h>
+#include <cmath>
 
 /**
  * Internal method to test if a positive number is prime.
