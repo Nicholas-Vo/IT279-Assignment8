@@ -12,7 +12,7 @@ class DisjSet {
 
 public:
     // Constructor to create and initialize sets of n items
-    DisjSet(Comparable n);
+    explicit DisjSet(Comparable n);
 
     // Creates n single item sets
     void makeSet(Comparable i);

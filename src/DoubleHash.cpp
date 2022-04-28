@@ -6,12 +6,12 @@
 
 template<typename HashedObj>
 DoubleHash<HashedObj>::DoubleHash(int size) {
-
+    curr_size = size;
 }
 
 template<typename HashedObj>
 bool DoubleHash<HashedObj>::isFull() {
-    return false;
+    return 0;
 }
 
 template<typename HashedObj>
