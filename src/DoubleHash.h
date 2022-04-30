@@ -107,7 +107,8 @@ public:
     }
 
 private:
-    int tableSize;
+    int tableSize = 10;
+    int prime = 3;
 
     // Pointer to an array containing buckets
     HashedObj *hashTable;
